@@ -16,6 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        Logger.log(message: "This is a DEBUG message", event: .d) // DEBUG log
+        Logger.log(message: "This is an ERROR message", event: .e) // ERROR log
+        Logger.log(message: "This is a INFO message", event: .i) // INFO log
+        Logger.log(message: "This is a VERBOSE message", event: .v) // VERBOSE log
+        Logger.log(message: "This is a WARNING message", event: .w) // WARNING log
+        Logger.log(message: "This is a SEVERE message", event: .s) // SEVERE Error log
+
+
+        
         return true
     }
 
