@@ -59,7 +59,7 @@ class Logger {
         return formatter
     }
     
-    class func log(message: String="",
+    class func printDebugInfo(message: String="",
                    event: LogEvent,
                    withdateFormat:DateFormat=DateFormat.format_yyyyMMdd_hhmmssSSS,
                    printData:Any?=nil,
