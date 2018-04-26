@@ -49,7 +49,7 @@ enum DateFormat:String
   
 }
 
-class Logger {
+class DebugLoggerSwift {
    static var dateFormatter: (DateFormat)->DateFormatter = {
        
         let formatter = DateFormatter()
@@ -87,6 +87,6 @@ class Logger {
 }
 internal extension Date {
     func toString(withFormatter formater:DateFormat) -> String {
-        return Logger.dateFormatter(formater).string(from: self as Date)
+        return DebugLoggerSwift.dateFormatter(formater).string(from: self as Date)
     }
 }

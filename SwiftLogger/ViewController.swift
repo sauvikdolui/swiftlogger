@@ -12,8 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Usage
-//        Logger.printDebugInfo(event: .debug) // DEBUG log without message
+//         Usage
+
 //        Logger.printDebugInfo(debugMessage: "This is an ERROR message", event: .error) // ERROR log with message
 //        Logger.printDebugInfo(debugMessage: "This is a INFO message", event: .info,withdateFormat: DateFormat.format_EEEE) // INFO with dateformat
 //        Logger.printDebugInfo(debugMessage: "This is a VERBOSE message", event:.verbose,printData:[1,2,3,["hello":"I am captain america"]]) // VERBOSE log with data to print
