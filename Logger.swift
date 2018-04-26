@@ -59,7 +59,7 @@ class Logger {
         return formatter
     }
     
-    class func printDebugInfo(message: String="",
+    class func printDebugInfo(debugMessage: String="",
                    event: LogEvent,
                    withdateFormat:DateFormat=DateFormat.format_yyyyMMdd_hhmmssSSS,
                    printData:Any?=nil,
@@ -70,9 +70,9 @@ class Logger {
         
         #if DEBUG
             print("\(event.rawValue):----\nDate :- \(Date().toString(withFormatter: withdateFormat))\nFunction Name :- \(funcName)\nLine number :- \(line)\nColumn Number :- \(column)\nFileName :- \(sourceFileName(filePath: fileName))\nFile Path :- \(fileName)")
-            if message.count > 0 || message != ""
+            if debugMessage.count > 0 || debugMessage != ""
             {
-                print("Message :- \(message)-----\n")
+                print("Message :- \(debugMessage)-----\n")
             }
             if let _ = printData
             {

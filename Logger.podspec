@@ -4,6 +4,7 @@ Pod::Spec.new do |s|
   s.version          = '0.1.0'
   s.summary          = 'Logger class is used to print debug information during runtme'
   s.description      = <<-DESC
+  s.swift_version = '>= 3.2, <= 4.0'
    It contain class methods,date formaters and different type of log types
 			DESC
  
