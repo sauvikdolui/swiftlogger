@@ -12,6 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Usage
+        Logger.log(event: .debug) // DEBUG log without message
+        Logger.log(message: "This is an ERROR message", event: .error) // ERROR log with message
+        Logger.log(message: "This is a INFO message", event: .info,withdateFormat: DateFormat.format_EEEE) // INFO with dateformat
+        Logger.log(message: "This is a VERBOSE message", event:.verbose,printData:[1,2,3,["hello":"I am captain america"]]) // VERBOSE log with data to print
+        Logger.log(message: "This is a WARNING message", event: .warning) // WARNING log
+        Logger.log(message: "This is a SEVERE message", event: .severe) // SEVERE Error log
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 

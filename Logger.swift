@@ -62,6 +62,7 @@ class Logger {
     class func log(message: String="",
                    event: LogEvent,
                    withdateFormat:DateFormat=DateFormat.format_yyyyMMdd_hhmmssSSS,
+                   printData:Any?=nil,
                    fileName: String = #file,
                    line: Int = #line,
                    column: Int = #column,
@@ -71,7 +72,11 @@ class Logger {
             print("\(event.rawValue):----\nDate :- \(Date().toString(withFormatter: withdateFormat))\nFunction Name :- \(funcName)\nLine number :- \(line)\nColumn Number :- \(column)\nFileName :- \(sourceFileName(filePath: fileName))\nFile Path :- \(fileName)")
             if message.count > 0 || message != ""
             {
-                print("Message :- \(message)")
+                print("Message :- \(message)-----\n")
+            }
+            if let _ = printData
+            {
+                print("Data--------\n\(printData!)")
             }
         #endif
     }
