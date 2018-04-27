@@ -21,7 +21,7 @@ enum LogEvent:String {
 enum DateFormat:String
 {
     case format_yyyyMMdd_hhmmssSSS = "yyyy-MM-dd hh:mm:ssSSS"
-    /*variables used for defining date structure in project*/
+    
     case  format_MMddyyyyHHmm = "MM-dd-yyyy HH:mm"
     case  format_MMMddyyyyhhmmaaa = "MMM dd, yyyy hh:mm aaa"
     case format_MMMddyyyyhhmma = "MMM dd, yyyy hh:mm a"
