@@ -8,6 +8,16 @@
 
 import UIKit
 
+struct Student {
+    let name: String
+    let rollNum: Int
+}
+extension Student: CustomDebugStringConvertible {
+    var debugDescription: String {
+        return "Student[name: \(name), roll: \(rollNum)]"
+    }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,15 +27,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-Log.d("This is a DEBUG message") // DEBUG log
-Log.e("This is an ERROR message") // ERROR log
-Log.i("This is a INFO message") // INFO log
-Log.v("This is a VERBOSE message") // VERBOSE log
-Log.w("This is a WARNING message") // WARNING log
-Log.s("This is a SEVERE message") // SEVERE Error log
-
-
+        // Logging simple string message
+        Log.d("This is a DEBUG message") // DEBUG log
+        Log.e("This is an ERROR message") // ERROR log
+        Log.i("This is a INFO message") // INFO log
+        Log.v("This is a VERBOSE message") // VERBOSE log
+        Log.w("This is a WARNING message") // WARNING log
+        Log.s("This is a SEVERE message") // SEVERE Error log
         
+        // Logging values
+        Log.d(Student(name: "Socket", rollNum: 19))
+
         return true
     }
 
