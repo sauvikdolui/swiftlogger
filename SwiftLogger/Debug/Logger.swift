@@ -41,7 +41,7 @@ func print(_ object: Any) {
 
 class Log {
     
-    static var dateFormat = "yyyy-MM-dd hh:mm:ssSSS"
+    static var dateFormat = "yyyy-MM-dd HH:mm:ssSSS"
     static var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = dateFormat
